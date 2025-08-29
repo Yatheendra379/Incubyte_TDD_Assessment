@@ -23,7 +23,7 @@ class StringCalculator {
       if (delimiterEndIndex != -1) {
         String delimiterLine = numbers.substring(2, delimiterEndIndex);
 
-        // Handle delimiters wrapped in brackets like [;] or multiple character delimiters
+        // Handle delimiters wrapped in brackets like [;] or multiple character  delimiters
         if (delimiterLine.startsWith('[') && delimiterLine.endsWith(']')) {
           delimiter = delimiterLine.substring(1, delimiterLine.length - 1);
         } else {
@@ -51,7 +51,7 @@ class StringCalculator {
           negatives.add(number);
         }
 
-        // Step 6 (Extra): Ignore numbers bigger than 1000
+        // Step 6 (Extra): Ignore numbers bigger than  1000
         if (number <= 1000) {
           numbersList.add(number);
         }

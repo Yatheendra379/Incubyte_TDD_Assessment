@@ -9,6 +9,7 @@ void main() {
       calculator = StringCalculator();
     });
 
+
     group('Step 1: Basic functionality', () {
       test('should return 0 for empty string', () {
         expect(calculator.add(''), equals(0));
@@ -24,6 +25,7 @@ void main() {
         expect(calculator.add('2,3'), equals(5));
       });
     });
+
 
     group('Step 2: Handle any amount of numbers', () {
       test('should handle multiple comma-separated numbers', () {
@@ -72,6 +74,7 @@ void main() {
         );
       });
 
+
       test('should throw exception for multiple negative numbers', () {
         expect(
               () => calculator.add('1,-2,-3,4'),
@@ -92,6 +95,7 @@ void main() {
         );
       });
     });
+
 
     group('Extra: Numbers bigger than 1000 should be ignored', () {
       test('should ignore numbers greater than 1000', () {
