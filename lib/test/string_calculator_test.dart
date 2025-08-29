@@ -39,5 +39,26 @@ void main() {
     });
 
 
+    test('should throw exception for negative numbers', () {
+      expect(
+            () => calculator.add('-1'),
+        throwsA(predicate((e) =>
+        e is ArgumentError &&
+            e.message == 'negative numbers not allowed: -1'
+        )),
+      );
+    });
+
+    test('should throw exception for multiple negative numbers', () {
+      expect(
+            () => calculator.add('1,-2,-3,4'),
+        throwsA(predicate((e) =>
+        e is ArgumentError &&
+            e.message == 'negative numbers not allowed: -2, -3'
+        )),
+      );
+    });
+
+
   });
 }
